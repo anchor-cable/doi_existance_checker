@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tauri App</title>
+    <script type="module" src="/main.js" defer></script>
+    <style>
+      .logo.vanilla:hover {
+        filter: drop-shadow(0 0 2em #ffe21c);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>参考文献リストチェッカー</h1>
+      <div class="row">
+        <textarea id="literatures-input" rows="20" cols="33" wrap="soft" placeholder="ここに参考文献リストを張り付けて送信ボタンを押してください。"></textarea>
+        <textarea id="literatures-output" rows="20" cols="33" readonly="true" placeholder="ここにチェック結果が表示されます。"></textarea>
+      </div>
+      <button id="send-button" type="button">送信</button>
+    </div>
+  </body>
+</html>

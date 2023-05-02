@@ -1,0 +1,7 @@
+{
+  "name": "doi_existance_checker",
+  "version": "0.0.1",
+  "main": "/src/main.js",
+  "author": "Tomoya Inoue",
+  "license": "MIT"
+}
