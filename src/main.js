@@ -2,16 +2,18 @@ const { invoke } = window.__TAURI__.tauri;
 
 let literaturesInput;
 let literaturesOutput;
+let sendBotton;
 
 async function verify() {
-  // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
+  sendBotton.disabled = true;
+  literaturesOutput.textContent = "検証中...";
   literaturesOutput.textContent = await invoke("verify", { lines: literaturesInput.value });
+  sendBotton.disabled = false;
 }
 
 window.addEventListener("DOMContentLoaded", () => {
   literaturesInput = document.querySelector("#literatures-input");
   literaturesOutput = document.querySelector("#literatures-output");
-  document
-    .querySelector("#send-button")
-    .addEventListener("click", () => verify());
+  sendBotton = document.querySelector("#send-button");
+  sendBotton.addEventListener("click", () => verify());
 });
